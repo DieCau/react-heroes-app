@@ -6,9 +6,9 @@ const CharactersByHero = ({ alter_ego, characters }) => {
     // return <p>{characters}</p>
 
     // 2da Opcion: Usando TERNARIO
-    return (alter_ego === characters) 
-    ? <></>
-    : <p>{ characters }</p>
+    return (alter_ego === characters)
+        ? <></>
+        : <p>{characters}</p>
 }
 
 export const HeroCard = ({
@@ -28,7 +28,11 @@ export const HeroCard = ({
                 <div className="card">
                     <div className="row no-gutters">
                         <div className="col-4">
-                            <img src={heroImageUrl} className="card-img" alt={superhero} />
+                            <img
+                                src={heroImageUrl}
+                                className="card-img"
+                                alt={superhero}
+                            />
                         </div>
 
                         <div className="card-body">
@@ -38,14 +42,14 @@ export const HeroCard = ({
                                 (alter_ego != characters) && ()
                             } */}
 
-                            <CharactersByHero characters={ characters} alter_ego={ alter_ego } />                           
+                            <CharactersByHero characters={characters} alter_ego={alter_ego} />
 
 
                             <p className="card-text">
-                                <small className="text-muted">{ first_appearance }</small>
+                                <small className="text-muted">{first_appearance}</small>
                             </p>
 
-                            <Link to={ `/hero/${ id }` }>
+                            <Link to={`/hero/${id}`}>
                                 Mas...
                             </Link>
                         </div>
